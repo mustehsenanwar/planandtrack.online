@@ -109,13 +109,17 @@ function showMessage(message, type) {
     const formMessage = document.getElementById('formMessage');
     if (formMessage) {
         formMessage.textContent = message;
-        formMessage.classList.remove('hidden', 'text-green-500', 'text-red-500');
+        formMessage.classList.remove('hidden', 'text-green-500', 'text-red-500', 'bg-green-100', 'bg-red-100', 'p-3', 'rounded-md', 'border', 'border-green-500', 'border-red-500', 'font-medium');
         
         if (type === 'success') {
-            formMessage.classList.add('text-green-500');
+            formMessage.classList.add('text-green-800', 'bg-green-100', 'p-3', 'rounded-md', 'border', 'border-green-500', 'font-medium');
         } else {
-            formMessage.classList.add('text-red-500');
+            formMessage.classList.add('text-red-800', 'bg-red-100', 'p-3', 'rounded-md', 'border', 'border-red-500', 'font-medium');
         }
+        
+        // Add icon to the beginning of the message
+        const icon = type === 'success' ? '<i class="fas fa-check-circle mr-2"></i>' : '<i class="fas fa-exclamation-circle mr-2"></i>';
+        formMessage.innerHTML = icon + message;
         
         // Hide the message after 5 seconds
         setTimeout(() => {
