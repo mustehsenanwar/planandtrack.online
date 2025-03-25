@@ -118,16 +118,6 @@
                                     class="w-full px-4 py-2 text-base text-gray-900 placeholder-gray-500 border-0 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-500 focus:ring-white"
                                     placeholder="Email">
                             </div>
-                            <div>
-                                <select id="project_size" required
-                                    class="w-full px-4 py-2 text-base text-gray-700 placeholder-gray-500 border-0 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-500 focus:ring-white">
-                                    <option value="" disabled selected>Project Size</option>
-                                    <option value="small">Small (Under $500K)</option>
-                                    <option value="medium">Medium ($500K - $2M)</option>
-                                    <option value="large">Large ($2M - $10M)</option>
-                                    <option value="enterprise">Enterprise ($10M+)</option>
-                                </select>
-                            </div>
                             <button type="submit"
                                 class="hero-cta w-full inline-flex items-center justify-center px-4 py-3 border border-transparent text-base font-bold rounded-md text-white bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 shadow-md transform transition-all duration-200 hover:scale-[1.02] focus:outline-none">
                                 <i class="fas fa-bolt mr-2"></i> SECURE YOUR EARLY ACCESS
@@ -225,7 +215,7 @@
                             alt="Construction manager testimonial">
                     </div>
                     <div>
-                        <p class="text-gray-600 italic">"After watching the demo, I signed up immediately. The 
+                        <p class="text-gray-600 italic">"After watching the demo, I signed up immediately. The
                             ai quote analyzing feature saved us hours of manual work by finding and comparing the best
                             quotes, saving time and money."</p>
                         <div class="mt-2 flex items-center">
@@ -260,19 +250,10 @@
 
             <!-- Pricing Toggle -->
             <div class="flex justify-center mb-10">
-                <div class="relative flex bg-gray-100 p-1 rounded-lg">
-                    <button type="button" id="monthly-pricing"
-                        class="pricing-btn relative py-2 px-6 rounded-md bg-white shadow-sm font-medium text-gray-900">
-                        Monthly
-                    </button>
-                    <button type="button" id="annual-pricing"
-                        class="pricing-btn relative py-2 px-6 rounded-md font-medium text-gray-700">
-                        Annual <span class="text-indigo-600 text-xs font-bold">SAVE 20%</span>
-                    </button>
-                    <div
-                        class="absolute -top-3 right-8 bg-yellow-200 text-xs font-bold text-yellow-800 rounded-full px-2 py-0.5 transform rotate-3">
-                        Most Popular
-                    </div>
+                <div class="inline-block bg-indigo-100 px-4 py-2 rounded-full">
+                    <span class="font-medium text-indigo-800">
+                        <i class="fas fa-tag mr-1"></i> Monthly Subscription • Pre-Launch Special
+                    </span>
                 </div>
             </div>
 
@@ -281,53 +262,92 @@
                 <!-- Starter Plan -->
                 <div
                     class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:border-indigo-300 hover:shadow-lg transition-all duration-300">
-                    <div class="p-6">
+                    <div class="p-5">
                         <h3 class="text-xl font-semibold text-gray-900">Starter</h3>
-                        <p class="mt-2 text-sm text-gray-600">For small construction projects</p>
-                        <div class="flex items-baseline my-6">
+                        <p class="mt-1 text-sm text-gray-600">For small construction projects</p>
+                        <div class="flex items-baseline my-4">
                             <div class="flex items-center">
-                                <span class="text-4xl font-extrabold text-gray-900" data-price="starter">Free</span>
+                                <span class="text-4xl font-extrabold text-gray-900">Free</span>
                             </div>
-                            <span class="ml-1 text-xl font-semibold text-gray-500 pricing-period">/month</span>
+                            <span class="ml-1 text-xl font-semibold text-gray-500">/month</span>
                         </div>
-                        <div class="mt-1 mb-6">
+
+                        <div class="px-0 pb-5 pt-4">
+                            <a href="#home"
+                                class="block w-full bg-gray-100 text-center py-3 px-4 rounded-lg text-base font-medium text-gray-800 hover:bg-gray-200 transition duration-150 ease-in-out">
+                                Sign Up Free
+                            </a>
+                        </div>
+
+                        <div class="mt-1 mb-3">
                             <span
                                 class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
                                 No Credit Card Required
                             </span>
                         </div>
-                        <ul class="space-y-4">
+
+                        <ul class="space-y-3 text-sm">
                             <li class="flex items-start">
                                 <div class="flex-shrink-0">
                                     <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
                                 </div>
-                                <p class="ml-3 text-sm text-gray-700">Up to 3 projects</p>
+                                <p class="ml-3 text-gray-700">Limited database</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-minus text-gray-300 w-5 h-5 flex-shrink-0"></i>
+                                </div>
+                                <p class="ml-3 text-gray-400">Material pricing</p>
                             </li>
                             <li class="flex items-start">
                                 <div class="flex-shrink-0">
                                     <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
                                 </div>
-                                <p class="ml-3 text-sm text-gray-700">Basic dashboard & reports</p>
+                                <p class="ml-3 text-gray-700">Limited RFQ outreach</p>
                             </li>
                             <li class="flex items-start">
                                 <div class="flex-shrink-0">
                                     <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
                                 </div>
-                                <p class="ml-3 text-sm text-gray-700">5 team members</p>
+                                <p class="ml-3 text-gray-700">Limited quotation analyzer</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-minus text-gray-300 w-5 h-5 flex-shrink-0"></i>
+                                </div>
+                                <p class="ml-3 text-gray-400">Contract preparation</p>
                             </li>
                             <li class="flex items-start">
                                 <div class="flex-shrink-0">
                                     <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
                                 </div>
-                                <p class="ml-3 text-sm text-gray-700">Email support</p>
+                                <p class="ml-3 text-gray-700">2 subcontractor monitors (real-time)</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Basic reporting</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-minus text-gray-300 w-5 h-5 flex-shrink-0"></i>
+                                </div>
+                                <p class="ml-3 text-gray-400">Alerts</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-minus text-gray-300 w-5 h-5 flex-shrink-0"></i>
+                                </div>
+                                <p class="ml-3 text-gray-400">Management</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-minus text-gray-300 w-5 h-5 flex-shrink-0"></i>
+                                </div>
+                                <p class="ml-3 text-gray-400">Custom integrations</p>
                             </li>
                         </ul>
-                    </div>
-                    <div class="px-6 pt-4 pb-8">
-                        <a href="#home"
-                            class="block w-full bg-gray-100 text-center py-3 px-4 rounded-lg text-base font-medium text-gray-800 hover:bg-gray-200 transition duration-150 ease-in-out">
-                            Sign Up Free
-                        </a>
                     </div>
                 </div>
 
@@ -340,73 +360,96 @@
                             MOST POPULAR · SPECIAL OFFER
                         </div>
                     </div>
-                    <div class="p-6 pt-10">
+                    <div class="p-5 pt-8">
                         <h3 class="text-xl font-semibold text-gray-900">Pro <span class="text-indigo-600">Early
                                 Bird</span></h3>
-                        <p class="mt-2 text-sm text-gray-600">Perfect for growing companies</p>
-                        <div class="flex items-baseline my-6">
+                        <p class="mt-1 text-sm text-gray-600">Perfect for growing companies</p>
+                        <div class="flex items-baseline my-4">
                             <div class="flex items-center space-x-3">
-                                <span class="text-2xl font-medium text-gray-500 line-through"
-                                    data-price="pro-original">$99</span>
-                                <span class="text-4xl font-extrabold text-indigo-600" data-price="pro">$49</span>
+                                <span class="text-2xl font-medium text-gray-500 line-through">$99</span>
+                                <span class="text-4xl font-extrabold text-indigo-600">$49</span>
                             </div>
-                            <span class="ml-1 text-xl font-semibold text-gray-500 pricing-period">/month</span>
+                            <span class="ml-1 text-xl font-semibold text-gray-500">/month</span>
                         </div>
-                        <div class="flex items-center mt-1 mb-6">
+
+                        <div class="px-0 pb-5 pt-4">
+                            <a href="#home"
+                                class="block w-full bg-indigo-600 text-center py-3 px-4 rounded-lg text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md transform transition hover:scale-105">
+                                Get Early Access Now
+                            </a>
+                        </div>
+
+                        <div class="flex items-center mt-1 mb-3">
                             <span
                                 class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 mr-2">
                                 <i class="fas fa-tag mr-1"></i> 50% OFF
                             </span>
                             <span class="text-xs text-red-600 font-medium">Only for the first 100 customers</span>
                         </div>
-                        <ul class="space-y-4">
+
+                        <ul class="space-y-3 text-sm">
                             <li class="flex items-start">
                                 <div class="flex-shrink-0">
                                     <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
                                 </div>
-                                <p class="ml-3 text-sm text-gray-700"><span class="font-medium">Unlimited</span>
-                                    projects</p>
+                                <p class="ml-3 text-gray-700">Full database</p>
                             </li>
                             <li class="flex items-start">
                                 <div class="flex-shrink-0">
                                     <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
                                 </div>
-                                <p class="ml-3 text-sm text-gray-700"><span class="font-medium">Full access</span> to
-                                    all features</p>
+                                <p class="ml-3 text-gray-700">Real-time pricing</p>
                             </li>
                             <li class="flex items-start">
                                 <div class="flex-shrink-0">
                                     <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
                                 </div>
-                                <p class="ml-3 text-sm text-gray-700">Up to 25 team members</p>
+                                <p class="ml-3 text-gray-700">Unlimited single-click RFQ outreach</p>
                             </li>
                             <li class="flex items-start">
                                 <div class="flex-shrink-0">
                                     <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
                                 </div>
-                                <p class="ml-3 text-sm text-gray-700">AI quote comparison</p>
+                                <p class="ml-3 text-gray-700">Unlimited AI-powered quotation analyzer</p>
                             </li>
                             <li class="flex items-start">
                                 <div class="flex-shrink-0">
                                     <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
                                 </div>
-                                <p class="ml-3 text-sm text-gray-700">Priority support</p>
+                                <p class="ml-3 text-gray-700">AI-prepared contracts</p>
                             </li>
                             <li class="flex items-start">
                                 <div class="flex-shrink-0">
                                     <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
                                 </div>
-                                <p class="ml-3 text-sm text-gray-700"><span class="font-medium">Early access</span> to
-                                    new features</p>
+                                <p class="ml-3 text-gray-700">20 subcontractor monitors (real-time)</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Advanced reporting</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">AI-driven alerts</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-minus text-gray-300 w-5 h-5 flex-shrink-0"></i>
+                                </div>
+                                <p class="ml-3 text-gray-400">Dedicated manager</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-minus text-gray-300 w-5 h-5 flex-shrink-0"></i>
+                                </div>
+                                <p class="ml-3 text-gray-400">Custom integrations</p>
                             </li>
                         </ul>
-                    </div>
-                    <div class="px-6 pt-4 pb-8">
-                        <a href="#home"
-                            class="block w-full bg-indigo-600 text-center py-3 px-4 rounded-lg text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md transform transition hover:scale-105">
-                            Get Early Access Now
-                        </a>
-                        <p class="mt-3 text-center text-xs text-gray-500">
+                        <p class="mt-4 text-center text-xs text-gray-500">
                             <i class="fas fa-lock mr-1"></i> 30-day money-back guarantee
                         </p>
                     </div>
@@ -415,62 +458,93 @@
                 <!-- Enterprise Plan -->
                 <div
                     class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:border-indigo-300 hover:shadow-lg transition-all duration-300">
-                    <div class="p-6">
+                    <div class="p-5">
                         <h3 class="text-xl font-semibold text-gray-900">Enterprise</h3>
-                        <p class="mt-2 text-sm text-gray-600">For large construction firms</p>
-                        <div class="flex items-baseline my-6">
+                        <p class="mt-1 text-sm text-gray-600">For large construction firms</p>
+                        <div class="flex items-baseline my-4">
                             <div class="flex items-center space-x-3">
-                                <span class="text-2xl font-medium text-gray-500 line-through"
-                                    data-price="enterprise-original">$299</span>
-                                <span class="text-4xl font-extrabold text-gray-900" data-price="enterprise">$149</span>
+                                <span class="text-2xl font-medium text-gray-500 line-through">$299</span>
+                                <span class="text-4xl font-extrabold text-gray-900">$149</span>
                             </div>
-                            <span class="ml-1 text-xl font-semibold text-gray-500 pricing-period">/month</span>
+                            <span class="ml-1 text-xl font-semibold text-gray-500">/month</span>
                         </div>
-                        <div class="mt-1 mb-6">
+
+                        <div class="px-0 pb-5 pt-4">
+                            <a href="#home"
+                                class="block w-full bg-gray-800 text-center py-3 px-4 rounded-lg text-base font-medium text-white hover:bg-gray-700 transition duration-150 ease-in-out">
+                                Request Enterprise Demo
+                            </a>
+                        </div>
+
+                        <div class="mt-1 mb-3">
                             <span
                                 class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
                                 Pre-Launch Price
                             </span>
                         </div>
-                        <ul class="space-y-4">
+
+                        <ul class="space-y-3 text-sm">
                             <li class="flex items-start">
                                 <div class="flex-shrink-0">
                                     <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
                                 </div>
-                                <p class="ml-3 text-sm text-gray-700"><span class="font-medium">Everything</span> in Pro
-                                    plan</p>
+                                <p class="ml-3 text-gray-700">Full database</p>
                             </li>
                             <li class="flex items-start">
                                 <div class="flex-shrink-0">
                                     <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
                                 </div>
-                                <p class="ml-3 text-sm text-gray-700">Unlimited team members</p>
+                                <p class="ml-3 text-gray-700">Real-time pricing</p>
                             </li>
                             <li class="flex items-start">
                                 <div class="flex-shrink-0">
                                     <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
                                 </div>
-                                <p class="ml-3 text-sm text-gray-700">Advanced analytics & reporting</p>
+                                <p class="ml-3 text-gray-700">Unlimited single-click RFQ outreach</p>
                             </li>
                             <li class="flex items-start">
                                 <div class="flex-shrink-0">
                                     <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
                                 </div>
-                                <p class="ml-3 text-sm text-gray-700">Dedicated account manager</p>
+                                <p class="ml-3 text-gray-700">Unlimited AI-powered quotation analyzer</p>
                             </li>
                             <li class="flex items-start">
                                 <div class="flex-shrink-0">
                                     <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
                                 </div>
-                                <p class="ml-3 text-sm text-gray-700">Custom integrations</p>
+                                <p class="ml-3 text-gray-700">AI-prepared contracts</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">20 subcontractor monitors (real-time)</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Advanced analytics for better decisions</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">AI-driven alerts</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Dedicated manager</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500 w-5 h-5 flex-shrink-0"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Custom integrations</p>
                             </li>
                         </ul>
-                    </div>
-                    <div class="px-6 pt-4 pb-8">
-                        <a href="#home"
-                            class="block w-full bg-gray-800 text-center py-3 px-4 rounded-lg text-base font-medium text-white hover:bg-gray-700 transition duration-150 ease-in-out">
-                            Request Enterprise Demo
-                        </a>
                     </div>
                 </div>
             </div>

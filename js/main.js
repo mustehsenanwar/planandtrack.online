@@ -41,106 +41,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Pricing toggle functionality
-    initPricingToggle();
+    // Initialize scroll-based elements
+    initScrollBasedEffects();
 });
 
-/**
- * Initialize the pricing toggle between monthly and annual plans
- */
-function initPricingToggle() {
-    const monthlyButton = document.getElementById('monthly-pricing');
-    const annualButton = document.getElementById('annual-pricing');
+// Handle scroll-based elements (navbar transparency, scroll-to-top button)
+function initScrollBasedEffects() {
+    const navbar = document.getElementById('navbar');
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
     
-    if (!monthlyButton || !annualButton) return;
-    
-    // Monthly prices (original)
-    const monthlyPrices = {
-        starter: 'Free',
-        pro: '$49',
-        proOriginal: '$99',
-        enterprise: '$149',
-        enterpriseOriginal: '$299'
-    };
-    
-    // Annual prices (20% discount shown monthly)
-    const annualPrices = {
-        starter: 'Free',
-        pro: '$39',
-        proOriginal: '$79',
-        enterprise: '$119',
-        enterpriseOriginal: '$239'
-    };
-    
-    // Add active state to monthly by default
-    monthlyButton.classList.add('active-pricing');
-    
-    // Price elements
-    const starterPrice = document.querySelector('[data-price="starter"]');
-    const proPrice = document.querySelector('[data-price="pro"]');
-    const proOriginal = document.querySelector('[data-price="pro-original"]');
-    const enterprisePrice = document.querySelector('[data-price="enterprise"]');
-    const enterpriseOriginal = document.querySelector('[data-price="enterprise-original"]');
-    
-    // Period text elements
-    const periodTexts = document.querySelectorAll('.pricing-period');
-    
-    // Handle monthly button click
-    monthlyButton.addEventListener('click', function() {
-        if (this.classList.contains('active-pricing')) return;
-        
-        // Update UI
-        annualButton.classList.remove('active-pricing');
-        this.classList.add('active-pricing');
-        
-        // Update prices with animation
-        updatePrices(monthlyPrices);
-        
-        // Update period text
-        periodTexts.forEach(el => {
-            el.textContent = '/month';
+    if (navbar && scrollToTopBtn) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-white', 'bg-opacity-70', 'backdrop-filter', 'backdrop-blur-lg', 'shadow-md');
+                navbar.classList.remove('bg-transparent');
+                scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+                scrollToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                navbar.classList.remove('bg-white', 'bg-opacity-70', 'backdrop-filter', 'backdrop-blur-lg', 'shadow-md');
+                navbar.classList.add('bg-transparent');
+                scrollToTopBtn.classList.add('opacity-0', 'invisible');
+                scrollToTopBtn.classList.remove('opacity-100', 'visible');
+            }
         });
-    });
-    
-    // Handle annual button click
-    annualButton.addEventListener('click', function() {
-        if (this.classList.contains('active-pricing')) return;
         
-        // Update UI
-        monthlyButton.classList.remove('active-pricing');
-        this.classList.add('active-pricing');
-        
-        // Update prices with animation
-        updatePrices(annualPrices);
-        
-        // Update period text - still show /month since discount is calculated monthly
-        periodTexts.forEach(el => {
-            el.textContent = '/month (billed annually)';
+        // Scroll to top when the button is clicked
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-    });
-    
-    /**
-     * Update pricing with smooth animation
-     */
-    function updatePrices(prices) {
-        if (starterPrice) animatePrice(starterPrice, prices.starter);
-        if (proPrice) animatePrice(proPrice, prices.pro);
-        if (proOriginal) animatePrice(proOriginal, prices.proOriginal);
-        if (enterprisePrice) animatePrice(enterprisePrice, prices.enterprise);
-        if (enterpriseOriginal) animatePrice(enterpriseOriginal, prices.enterpriseOriginal);
-    }
-    
-    /**
-     * Animate price change
-     */
-    function animatePrice(element, newPrice) {
-        // Add fade-out class
-        element.classList.add('price-fade');
-        
-        // Change price after fade out
-        setTimeout(() => {
-            element.textContent = newPrice;
-            element.classList.remove('price-fade');
-        }, 200);
     }
 } 
